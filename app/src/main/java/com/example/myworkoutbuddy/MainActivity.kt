@@ -1,9 +1,12 @@
 package com.example.myworkoutbuddy
 
 import android.os.Bundle
+import android.widget.Button
 import androidx.activity.ComponentActivity
 import androidx.activity.compose.setContent
+import androidx.compose.foundation.layout.*
 import androidx.compose.foundation.layout.fillMaxSize
+import androidx.compose.material.Button
 import androidx.compose.material.MaterialTheme
 import androidx.compose.material.Surface
 import androidx.compose.material.Text
@@ -37,7 +40,15 @@ fun Greeting(name: String) {
 @Preview(showBackground = true)
 @Composable
 fun DefaultPreview() {
-    MyWorkoutBuddyTheme {
-        Greeting("Android")
+    Column {
+        MyWorkoutBuddyTheme {
+            Greeting("Matt and Brian")
+        }
+        Button(onClick = { /* do nothing for now */ }) {
+            Text(text = "Start Workout")
+        }
+        Button(onClick = { /* do nothing for now */ }) {
+            Text(text = "View History")
+        }
     }
 }
